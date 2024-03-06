@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Border Radius</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <h1>Gerador de Border-Radius</h1>
+
+    <div class="select-options">
+      <select id="border-radius-type">
+        <option value="simple">Simples</option>
+        <option value="advanced">Avançado</option>
+      </select>
+      <select id="border-radius-unit">
+        <option value="pixels">Píxels</option>
+        <option value="percent">Porcentagem</option>
+      </select>
+    </div>
+
+    <div id="simple-border-radius">
+      <input type="number" class="top-left" value="8" />
+      <input type="number" class="top-right" value="8" />
+      <input type="number" class="bottom-right" value="8" />
+      <input type="number" class="bottom-left" value="8" />
+
+      <button class="pull top-left" style="top: 8px; left: 8px">
+        <span class="bullet" aria-label="puxe para alterar o valor"></span>
+      </button>
+      <button class="pull top-right" style="top: 8px; right: 8px">
+        <span class="bullet" aria-label="puxe para alterar o valor"></span>
+      </button>
+      <button class="pull bottom-right" style="bottom: 8px; right: 8px">
+        <span class="bullet" aria-label="puxe para alterar o valor"></span>
+      </button>
+      <button class="pull bottom-left" style="bottom: 8px; left: 8px">
+        <span class="bullet" aria-label="puxe para alterar o valor"></span>
+      </button>
+      <div class="example-box"></div>
+    </div>
+
+    <div id="advanced-border-radius">
+      <button class="pull top" style="left: 0">
+        <span class="bullet" aria-label="puxe para alterar o valor"></span>
+      </button>
+      <button class="pull right" style="top: 0">
+        <span class="bullet" aria-label="puxe para alterar o valor"></span>
+      </button>
+      <button class="pull bottom" style="right: 0">
+        <span class="bullet" aria-label="puxe para alterar o valor"></span>
+      </button>
+      <button class="pull left" style="bottom: 0">
+        <span class="bullet" aria-label="puxe para alterar o valor"></span>
+      </button>
+
+      <input class="top-input" type="hidden" value="50" />
+      <input class="right-input" type="hidden" value="50" />
+      <input class="bottom-input" type="hidden" value="50" />
+      <input class="left-input" type="hidden" value="50" />
+
+      <div class="example-box"></div>
+    </div>
+
+    <div class="output">
+      <input
+        type="text"
+        id="output"
+        value="border-radius: 8px 8px 8px 8px;"
+        readonly
+      />
+      <button id="copy" aria-label="copiar para a área de transferência">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#000000"
+          viewBox="0 0 256 256"
+        >
+          <path
+            d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"
+          ></path>
+        </svg>
+      </button>
+      <div class="copied-message">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="#fff"
+          viewBox="0 0 256 256"
+        >
+          <path
+            d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"
+          ></path>
+        </svg>
+        <p>Copiado!</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>Feito com 💜 por <a href="https://felipedslima.com.br">Felipe</a>.</p>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
+
+<!-- 0 100 0 100 / 100 00 100 0 -->
+<!-- top top bottom bottom / left right right left -->

@@ -144,11 +144,13 @@ function updateAdvancedPullButtonsByValue() {
 
 function onTypeChange() {
   if (borderRadiusType.value === "simple") {
+    borderRadiusUnit.style.display = "block";
     simpleBorderRadius.style.display = "flex";
     advancedBorderRadius.style.display = "none";
     updateSimpleBorderRadius();
     updateSimplePullButtonsByValue();
   } else {
+    borderRadiusUnit.style.display = "none";
     simpleBorderRadius.style.display = "none";
     advancedBorderRadius.style.display = "flex";
     updateAdvancedBorderRadius();
